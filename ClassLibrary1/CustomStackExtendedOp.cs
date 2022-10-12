@@ -8,13 +8,15 @@ namespace ClassLibrary1
 {
     public static class CustomStackExtendedOp
     {
-        public static void DisplayAllInternsNameAndId(CustomStack<Jedi> stack)
+        public static void DisplayAllInternsNameAndId(ICustomStack<IIntern> stack)
         {
             while (stack.Count() > 0)
             {
-                Jedi jedi = stack.Pop();
-                Console.WriteLine(jedi.GetNameId());
+                //Console.WriteLine(stack.Pop());
+                Console.WriteLine(stack.Pop().GetNameId());
             }
         }
+
+
     }
 }

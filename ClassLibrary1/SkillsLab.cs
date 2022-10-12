@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public class Jedi: IIntern
+    public class SkillsLab : IIntern
     {
         private string Name { get; set; }
         private int Id { get; set; }
-        public string NameId => $"Jedi - {Name}: {Id}";
+        public string NameId => $"SkillsLab - {Name}: {Id}";
 
-        //public string NameId
-        //{
-        //    get
-        //    {
-        //        return $"Jedi - {Name} : {Id}";
-        //    }
-        //}
+       //public string NameId
+       //{
+       //    get
+       //    {
+       //        return $"SkillsLab - {Name} : {Id}";
+       //    }
+       //}
 
-
-        public Jedi(string name, int id)
+        public SkillsLab(string name, int id)
         {
             Name = name;
             Id = id;
@@ -31,7 +30,5 @@ namespace ClassLibrary1
         {
             return NameId;
         }
-
-        
     }
 }

@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public class CustomStack<T>
+    public class CustomStack<iIIntern> : ICustomStack<IIntern>
     {
-        public T[] arr;
+        public IIntern[] arr;
         public int pointer;
        
 
         public CustomStack()
         {
-            arr=new T[10];
+            arr=new IIntern[10];
             pointer = 0;
         }
 
-        public void Push(T str)
+        public void Push(IIntern value)
         {
             
-            arr[pointer] = str;
+            arr[pointer] = value;
             pointer++;
 
         }
@@ -31,13 +31,13 @@ namespace ClassLibrary1
             return pointer;
         }
 
-        public T Pop()
+        public IIntern Pop()
         {
             pointer--;
-            T str=arr[pointer];
+            IIntern value=arr[pointer];
             
 
-            return str;
+            return value;
         }
 
 
